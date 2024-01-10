@@ -11,3 +11,21 @@ About Me:
 - Currently studying at Mapua Malayan Colleges Laguna
 
 - Right now studying SQL, HTML and Assembly.
+
+
+Git Cheat Sheet:
+
+git add [file]
+add a file as it looks now to your next commit (stage)
+
+git branch [branch-name]
+create a new branch at the current commit
+
+git clone [url]
+retrieve an entire repository from a hosted location via URL
+
+git log --follow [file]
+show the commits that changed file, even across renames
+
+git merge [alias]/[branch]
+merge a remote branch into your current branch to bring it up to date
