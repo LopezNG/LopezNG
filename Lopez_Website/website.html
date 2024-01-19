@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibl" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductory Portfolio Student</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="https://kit.fontawesome.com/4a7343cbae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="WebsiteImages/LOGO.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Networking</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h3>A Computer Science Student</h3>
+            <h1>Hello, I'm <span>Neoron Lopez!</span></h1>
+            <h5>They call me Codeshaker, Programbreaker.</h5>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="WebsiteImages/CS_LOPEZ_NEORON.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am currently a second year student at Mapúa Malayan Colleges Laguna with the course
+                of Computer Science, I need to succeed and in order to do that I must keep improving myself
+                everyday and keep studying in order to not dissapoint my parents.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Career')">Career</p>
+                    <p class="tab-links" onclick="opentab('Goals')">Goals</p>
+                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                </div>
+                <div class="tab-contents active-tab" id="Career">
+                    <ul>
+                        <p>First I must answer the question, why did I choose this career path, for me I saw
+                            technology rapidly evolving and I become aware that in the future artificial intelligence
+                            will be better than humans at doing their jobs therefore replacing us, so I would like to
+                            prepared by not having a job that can be easily replaced by artificial intelligence. 
+                        </p>
+                        <br>
+                        <p>
+                            The future of artificial intelligence can be close but since it has not been perfected yet,
+                            the demand for computer science professionals is consistently high across industries, 
+                            opening up numerous career opportunities afterall my priority in life is to retire early and 
+                            enjoy the nature that sorround us, explore the world and have nothing to worry about. 
+                        </p>
+                    </ul>
+                </div>
+                    <div class="tab-contents" id="Goals">
+                        <ul>
+                            <p>My Goal is to become a Machine Learning Engineer, that is my priority job but if destiny
+                                dosen't allign I will settle for a Cloud Architech since it gives the best salary but in 
+                                order to achieve my priority job, I need to build a strong foundation in machine learning 
+                                concepts, algorithms, and techniques. This includes understanding supervised and unsupervised 
+                                learning, regression, classification, clustering, and various optimization methods.
+                            </p>
+                            <br>
+                            <p>
+                                Of course my primary objective is financial freedom and early retirement. Building a strong 
+                                financial foundation is crucial for early retirement. I plan to adopt a disciplined approach 
+                                to saving and investing, taking advantage of tax-efficient accounts and exploring diverse investment 
+                                opportunities to maximize returns. In addition to my full-time job, I aim to explore side projects or 
+                                entrepreneurial ventures that align with my skills and interests.
+                            </p>
+                        </ul>
+                    </div>
+                        <div class="tab-contents" id="Hobbies">
+                            <ul>
+                                <p>I consider my hobby to be gaming since my interest could also lead to exploring game development. 
+                                    Gaming involves intricate graphics and animations, which has sparked my curiosity in this aspect of 
+                                    computer science. I may delve into learning graphics programming, understanding rendering techniques, 
+                                    and exploring animation algorithms to enhance my understanding of the visual components of games. 
+                                    As a computer science student, I might take the opportunity to learn about popular game engines like 
+                                    Unity or Unreal Engine. 
+                                </p>
+                                <br>
+                                <p>
+                                    Also my notable hobbies that are not related to computer science is collecting hot wheels and transformers,
+                                    sometime I could go for a bike ride or play badminton, if my parents have a long weekend we can go camping or
+                                    hiking.
+                                </p>
+                            </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="Education">
+    <div class="container">
+        <h1 class="sub-title">My Current Experiences</h1>
+        <div class="education-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>UI/UX Design</h2>
+                <p><li>Figma</li></p>
+                <p><li>Canva</li></p>
+                <p><li>Wireframes</li></p>
+                <p><li>Prototypes</li></p>
+            </div>
+            <div>
+                <i class="fa-brands fa-windows"></i>
+                <h2>Web Design</h2>
+                <p><li>HTML</li></p>
+                <p><li>CSS</li></p>
+                <p><li>JavaScript</li></p>
+            </div>
+            <div>
+                <i class="fa-solid fa-microchip"></i>
+                <h2>App Design</h2>
+                <p><li>C#</li></p>
+                <p><li>C++</li></p>
+                <p><li>Python</li></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="WebsiteImages/4pics1word.png">
+                <div class="layer">
+                    <h3>4Pics1Word</h3>
+                    <p>A simple python project that we encountered in 1st year college the 4pics1word. we
+                        were required to understanding object oriented programming for this project.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/Screenshot 2024-01-20 003641.png">
+                <div class="layer">
+                    <h3>HCI Escape</h3>
+                    <p>HCI Escape is a game based learning application. With it's quizes and mystery the learning 
+                        environment is fun and engaging to the user so basically explained the game is just like a
+                    puzzel game.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="WebsiteImages/JeepneyRush.png">
+                <div class="layer">
+                    <h3>Jeepney Rush</h3>
+                    <p>
+                        A C# game that encompases 2d view.The Jeepney moves automatically, and the 
+                        player can control its movements by pressing keys d and a. The gameplay is endless,
+                        and the goal is to avoid zombies, collect power-ups, and achieve the highest possible score.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
