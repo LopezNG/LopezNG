@@ -1,3 +1,4 @@
+![image alt](https://github.com/LopezNG/LopezNG/blob/666a356b424c3544fd7f7303002b27badd1803a3/Knight.gif)
 
 <h1 align="center">Hello! 🍚, I'm Neoron Lopez</h1>
 
