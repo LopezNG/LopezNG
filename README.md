@@ -1,3 +1,11 @@
+
+<h1 align="center">Hello! 🍚, I'm Neoron Lopez</h1>
+
+<h3 align="center">A Computer Science student from the Philippines</h3>
+
+---
+
+
 ## Tech Stack
 
 ### Languages
