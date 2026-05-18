@@ -3,9 +3,6 @@
 
 <h3 align="center">A Computer Science student from the Philippines</h3>
 
----
-
-
 ## Tech Stack
 
 ### Languages
