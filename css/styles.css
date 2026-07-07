@@ -1,0 +1,705 @@
+/* ===================================================================
+   Portfolio — Terminal / Developer Aesthetic
+   Inspired by the look & feel of codewithstu.tv
+   -------------------------------------------------------------------
+   CUSTOMIZE: change the values in :root to re-theme the whole site.
+=================================================================== */
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Colors */
+  --bg:            #0a0b0d;
+  --bg-elev:       #111316;
+  --bg-elev-2:     #16191e;
+  --border:        #1e2127;
+  --border-soft:   #2a2e36;
+  --text:          #e6e8eb;
+  --text-dim:      #8b919a;
+  --text-faint:    #5b616b;
+
+  --accent:        #4ade80;   /* terminal green — swap to taste */
+  --accent-dim:    #2a8c52;
+  --accent-glow:   rgba(74, 222, 128, 0.15);
+
+  /* Typography */
+  --mono: "JetBrains Mono", "SF Mono", ui-monospace, "Cascadia Code",
+          Menlo, Consolas, monospace;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+
+  /* Layout */
+  --maxw: 1120px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --gutter: 24px;
+
+  /* Effects */
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* subtle grid backdrop */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ---------- Helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.mono { font-family: var(--mono); }
+.accent { color: var(--accent); }
+.dim { color: var(--text-dim); }
+
+/* Comment-style section label e.g. "// PROJECTS" */
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::before { content: "//"; color: var(--accent); }
+
+.section {
+  padding-block: clamp(56px, 9vw, 110px);
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.section-intro {
+  color: var(--text-dim);
+  max-width: 620px;
+  margin-bottom: 44px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 11px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  background: var(--bg-elev);
+  color: var(--text);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+.btn--primary {
+  background: var(--accent);
+  color: #07120b;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.btn--primary:hover {
+  box-shadow: 0 8px 24px var(--accent-glow);
+  background: #5ee98c;
+}
+
+/* ===================================================================
+   HEADER / NAV
+=================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 11, 13, 0.72);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition),
+              padding var(--transition);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  transition: height var(--transition), max-width var(--transition),
+              padding var(--transition), background var(--transition),
+              border-color var(--transition), border-radius var(--transition),
+              box-shadow var(--transition), backdrop-filter var(--transition);
+  border: 1px solid transparent;
+}
+
+/* ---- Scrolled: header background fades out, nav becomes a floating pill ---- */
+.site-header.scrolled {
+  background: transparent;
+  border-bottom-color: transparent;
+  /* No blur on the header layer either — keeps the grid behind the
+     floating pill perfectly sharp and undistorted. */
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  padding: 12px 16px 0;
+}
+.site-header.scrolled .nav {
+  max-width: 720px;
+  height: 52px;
+  padding-inline: 22px;
+  /* Solid, opaque dark fill — an impenetrable block so no scrolling
+     content bleeds through the pill. */
+  background: var(--bg-elev);
+  /* No blur / frosted glass needed; the fill is fully opaque. */
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  /* Sharp, thin, high-fidelity green frame. */
+  border: 1px solid rgba(74, 222, 128, 0.5);
+  border-radius: 999px;
+  /* Crisp framing: a hairline green ring + soft depth shadow + faint inner
+     highlight. */
+  box-shadow:
+    0 0 0 1px rgba(74, 222, 128, 0.08),
+    0 10px 34px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(74, 222, 128, 0.1),
+    inset 0 1px 0 rgba(74, 222, 128, 0.08);
+}
+.brand {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.brand .prompt { color: var(--accent); }
+.brand .cursor {
+  width: 9px;
+  height: 1.05em;
+  background: var(--accent);
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1.1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.nav-links a:hover { color: var(--text); background: var(--bg-elev); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::before { content: "~/"; color: var(--accent); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+.nav-toggle span {
+  width: 24px; height: 2px;
+  background: var(--text);
+  transition: var(--transition);
+}
+
+/* ===================================================================
+   HERO (Home)
+=================================================================== */
+.hero { padding-block: clamp(60px, 11vw, 130px); }
+
+.hero .eyebrow {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+.hero .eyebrow::before { content: "// "; color: var(--text-faint); }
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.hero h1 .hl { color: var(--accent); }
+
+.hero .lede {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--text-dim);
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+.hero .meta {
+  font-family: var(--mono);
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+
+.socials { display: flex; gap: 8px; flex-wrap: wrap; }
+.socials a {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.socials a:hover { color: var(--accent); border-color: var(--accent-dim); }
+
+/* terminal window decoration */
+.terminal-card {
+  margin-top: 56px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg-elev-2);
+  border-bottom: 1px solid var(--border);
+}
+.terminal-bar .dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.r { background: #ff5f56; } .dot.y { background: #ffbd2e; } .dot.g { background: #27c93f; }
+.terminal-bar .tt {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  margin-left: 8px;
+}
+.terminal-body {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 22px;
+  line-height: 1.9;
+  color: var(--text-dim);
+}
+.terminal-body .ln .pmt { color: var(--accent); }
+.terminal-body .ln .key { color: var(--text); }
+.terminal-body .out { color: var(--text-faint); }
+
+/* ===================================================================
+   MARQUEE (Tech Stack ticker)
+=================================================================== */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid var(--border);
+  padding-block: 18px;
+  background: var(--bg-elev);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee + .marquee { border-top: none; }
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 38s linear infinite;
+}
+.marquee--reverse .marquee-track { animation-direction: reverse; animation-duration: 46s; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track span {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding-inline: 18px;
+}
+.marquee-track span .sep { color: var(--accent); margin-right: 18px; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* ===================================================================
+   TECH STACK GRID
+=================================================================== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+.tech-item {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elev);
+  color: var(--text-dim);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tech-item:hover { color: var(--text); border-color: var(--accent-dim); transform: translateY(-3px); }
+.tech-item::before { content: "▹"; color: var(--accent); }
+
+/* ===================================================================
+   TIMELINE (Experience)
+=================================================================== */
+.subhead {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin: 48px 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.subhead::before { content: "# "; color: var(--text-faint); }
+.subhead:first-of-type { margin-top: 0; }
+
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px; top: 6px; bottom: 6px;
+  width: 1px;
+  background: var(--border-soft);
+}
+.tl-item { position: relative; padding-bottom: 34px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -28px; top: 7px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+.tl-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.tl-role { font-size: 1.1rem; font-weight: 600; }
+.tl-org { color: var(--accent); }
+.tl-date {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+.tl-item p { color: var(--text-dim); margin-top: 6px; }
+.tl-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.tag {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  background: var(--bg-elev-2);
+  border: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ===================================================================
+   CARDS (Projects / Certs / Education grids)
+=================================================================== */
+.card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+.card-grid--2 { grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Default: clean, low-contrast subtle border. */
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  /* Solid dark charcoal / near-black fill. */
+  background: var(--bg-elev);
+  padding: 30px;
+  /* Flat, solid, offset drop layer (bottom + right) in a very muted green. */
+  box-shadow: 6px 6px 0 0 rgba(74, 222, 128, 0.12);
+  /* Smooth state change for the hover float + shadow pop. */
+  transition: all 300ms ease-out;
+  height: 100%;
+}
+/* Active / focused / hovered: high-intensity brutalist pop + float. */
+.card:hover,
+.card:focus-within,
+.card.is-active {
+  border-width: 2px;
+  border-color: var(--accent);
+  /* Physically lift the card upward. */
+  transform: translateY(-4px);
+  /* Crisp, hard-edged, fully solid offset shadow (zero blur) in vibrant green.
+     Attached to the element, so it travels with the float for a 3D depth feel. */
+  box-shadow: 6px 6px 0 0 var(--accent);
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.card-icon {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+.card-links { display: flex; gap: 12px; }
+.card-links a { color: var(--text-faint); font-family: var(--mono); font-size: 0.8rem; transition: var(--transition); }
+.card-links a:hover { color: var(--accent); }
+/* Subtle, muted interactive arrow in the top-right corner. */
+.card-arrow {
+  font-family: var(--mono);
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-left: auto;
+  color: var(--text-faint);
+  transition: var(--transition);
+}
+.card-arrow:hover { color: var(--accent); }
+/* Title: crisp white by default, neon green when the card is engaged. */
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+.card:hover h3,
+.card:focus-within h3,
+.card.is-active h3 { color: var(--accent); }
+.card p { color: var(--text-dim); font-size: 0.95rem; flex-grow: 1; }
+.card .tl-tags { margin-top: 16px; }
+
+/* Featured cards keep a slightly stronger (still subtle) resting border. */
+.card--featured { border-color: var(--border-soft); }
+.card--featured .badge {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* simple meta row for certs / education */
+.meta-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ===================================================================
+   BLOG placeholder / generic empty state
+=================================================================== */
+.empty-state {
+  text-align: center;
+  padding-block: clamp(60px, 12vw, 140px);
+}
+.empty-state .glyph {
+  font-family: var(--mono);
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.empty-state h1 { font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: -0.02em; margin-bottom: 14px; }
+.empty-state p { color: var(--text-dim); max-width: 520px; margin: 0 auto 28px; }
+.empty-state .blink-line {
+  font-family: var(--mono);
+  color: var(--text-faint);
+}
+.empty-state .blink-line::after {
+  content: "_";
+  color: var(--accent);
+  animation: blink 1.1s step-end infinite;
+}
+
+/* ===================================================================
+   CONTACT
+=================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-list { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  transition: var(--transition);
+}
+.contact-row:hover { border-color: var(--accent-dim); transform: translateX(4px); }
+.contact-row .ci { font-family: var(--mono); color: var(--accent); font-size: 1.1rem; width: 26px; }
+.contact-row .cl { font-family: var(--mono); font-size: 0.78rem; color: var(--text-faint); }
+.contact-row .cv { font-size: 0.98rem; }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-family: var(--mono); font-size: 0.82rem; color: var(--text-dim); }
+.field label::before { content: "> "; color: var(--accent); }
+.field input,
+.field textarea {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-elev);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  transition: var(--transition);
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* ===================================================================
+   FOOTER
+=================================================================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elev);
+  padding-block: 48px;
+  margin-top: 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 32px;
+}
+.footer-brand .brand { font-size: 1.1rem; margin-bottom: 12px; }
+.footer-brand p { color: var(--text-dim); font-size: 0.92rem; max-width: 320px; }
+.footer-col h4 {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.footer-col a {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  padding: 4px 0;
+  transition: var(--transition);
+}
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+/* ===================================================================
+   RESPONSIVE
+=================================================================== */
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg-elev);
+    border-bottom: 1px solid var(--border);
+    padding: 12px var(--gutter) 20px;
+    transform: translateY(-150%);
+    transition: transform var(--transition);
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { padding: 14px 8px; border-bottom: 1px solid var(--border); }
+  .card-grid--2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .tl-head { gap: 4px; }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .brand .cursor, .empty-state .blink-line::after { animation: none; }
+  * { scroll-behavior: auto; }
+}

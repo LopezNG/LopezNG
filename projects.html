@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Your Name</title>
+  <meta name="description" content="Featured and other projects built by Your Name." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="prompt">~/</span><span>yourname</span><span class="cursor"></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">home</a></li>
+        <li><a href="experience.html">experience</a></li>
+        <li><a class="active" href="projects.html">projects</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container">
+      <p class="section-label">projects</p>
+      <h2>Things I've built</h2>
+      <p class="section-intro">
+        A selection of projects I've designed, built and shipped. Most are
+        open source — feel free to dig into the code.
+      </p>
+
+      <!-- ===== FEATURED ===== -->
+      <h3 class="subhead">featured_projects</h3>
+      <div class="card-grid card-grid--2">
+        <article class="card card--featured" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project One</h3>
+          <p>
+            A longer description of your flagship project. Explain the problem it
+            solves, the key features, and what makes the engineering interesting.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">AWS</span>
+          </div>
+        </article>
+
+        <article class="card card--featured" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project Two</h3>
+          <p>
+            Description of another significant project. Highlight the impact,
+            scale, or any technical challenges you overcame.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== OTHER ===== -->
+      <h3 class="subhead">other_projects</h3>
+      <div class="card-grid">
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project Three</h3>
+          <p>Short one or two line description of the project and its purpose.</p>
+          <div class="tl-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project Four</h3>
+          <p>Short one or two line description of the project and its purpose.</p>
+          <div class="tl-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Express</span>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project Five</h3>
+          <p>Short one or two line description of the project and its purpose.</p>
+          <div class="tl-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <a class="card-arrow" href="#" aria-label="View project">→</a>
+          </div>
+          <h3>Project Six</h3>
+          <p>Short one or two line description of the project and its purpose.</p>
+          <div class="tl-tags">
+            <span class="tag">Go</span>
+            <span class="tag">Docker</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand"><span class="prompt">~/</span>yourname</span>
+          <p>Software engineer building for the web and cloud. Always shipping, always learning.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Your Name. All rights reserved.</span>
+        <span>built with vanilla html · css · js</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
