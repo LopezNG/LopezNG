@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Your Name</title>
-  <meta name="description" content="Thoughts and writing — coming soon." />
-
+  <title>Practicum Experience — R.G. Manabat &amp; Co. (KPMG Philippines)</title>
+  <meta name="description" content="Interactive case study of my IT Project Management internship at R.G. Manabat & Co. (KPMG Philippines) — enterprise documentation, Power Platform development, and agile practices." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <script src="js/theme.js"></script>
 </head>
 <body>
 
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ============ HEADER ============ -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">
-        <span class="prompt">~/</span><span>yourname</span><span class="cursor"></span>
+        <span class="prompt">~/</span><span>neoronlopez</span><span class="cursor"></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -27,33 +32,263 @@
         <li><a href="projects.html">projects</a></li>
         <li><a class="active" href="blog.html">blog</a></li>
         <li><a href="contact.html">contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
 
+  <!-- Section Navigation Dots -->
+  <nav class="slide-nav" aria-label="Section navigation">
+    <button class="slide-nav-dot active" data-slide="0" data-tooltip="Top" aria-label="Hero"></button>
+    <button class="slide-nav-dot" data-slide="1" data-tooltip="Overview" aria-label="Overview"><span class="dot-tooltip">Overview</span></button>
+    <button class="slide-nav-dot" data-slide="2" data-tooltip="Contributions" aria-label="Contributions"><span class="dot-tooltip">Contributions</span></button>
+    <button class="slide-nav-dot" data-slide="3" data-tooltip="Workflow" aria-label="Workflow"><span class="dot-tooltip">Workflow</span></button>
+    <button class="slide-nav-dot" data-slide="4" data-tooltip="Gallery" aria-label="Gallery"><span class="dot-tooltip">Gallery</span></button>
+    <button class="slide-nav-dot" data-slide="5" data-tooltip="Learnings" aria-label="Learnings"><span class="dot-tooltip">Learnings</span></button>
+    <button class="slide-nav-dot" data-slide="6" data-tooltip="Takeaways" aria-label="Takeaways"><span class="dot-tooltip">Takeaways</span></button>
+  </nav>
+
   <main>
-    <section class="container">
-      <div class="empty-state">
-        <p class="section-label" style="justify-content:center">blog</p>
-        <div class="glyph">~/blog $ _</div>
-        <h1>Coming soon</h1>
-        <p>
-          I'm putting together writing on the things I learn while building —
-          deep dives, tutorials and notes. Check back soon.
-        </p>
-        <p class="blink-line">$ git commit -m "first post" </p>
-        <div style="margin-top:30px">
-          <a class="btn btn--primary" href="projects.html">Browse projects instead →</a>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="prac-slide prac-hero">
+      <div class="hero-particles"></div>
+      <div class="parallax-orb orb-1"></div>
+      <div class="parallax-orb orb-2"></div>
+      <div class="container hero-content">
+        <span class="section-label">Practicum Experience</span>
+        <h1 class="reveal">IT Project Management<br /><span class="hl">Intern</span></h1>
+        <p class="hero-sub reveal">Enterprise Software Development Internship at<br /><strong>R.G. Manabat &amp; Co.</strong> (KPMG Philippines)</p>
+        <div class="hero-meta reveal">
+          <span class="meta-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May – July 2026</span>
+          <span class="meta-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-3a2 2 0 01-2-2V2"/><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7z"/></svg> IT Services — PMO</span>
+          <span class="meta-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 480+ Hours</span>
+        </div>
+        <div class="hero-tech reveal stagger-children">
+          <span class="tech-badge">Power Apps</span>
+          <span class="tech-badge">Power Automate</span>
+          <span class="tech-badge">SharePoint</span>
+          <span class="tech-badge">Microsoft 365</span>
+          <span class="tech-badge">Agile/Scrum</span>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview" class="prac-slide prac-slide--alt">
+      <div class="parallax-orb orb-3"></div>
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">Overview</span>
+          <h2>Internship at a Glance</h2>
+          <p class="slide-desc">A 12-week deep dive into enterprise IT project management at one of the Big Four firms.</p>
+        </div>
+        <div class="overview-grid stagger-children">
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">🏢</div>
+            <h3>Company</h3>
+            <p>R.G. Manabat &amp; Co., the Philippine member firm of KPMG International — one of the world's leading professional services networks.</p>
+          </div>
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">🖥️</div>
+            <h3>Department</h3>
+            <p>IT Services — Project Management Office (PMO), responsible for overseeing all internal technology initiatives and enterprise solutions.</p>
+          </div>
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">📋</div>
+            <h3>Role</h3>
+            <p>IT Project Management Intern — bridging business requirements with technical implementation across the Power Platform ecosystem.</p>
+          </div>
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">⚙️</div>
+            <h3>Responsibilities</h3>
+            <p>Requirements gathering, documentation, risk assessment, Power Apps/Automate development, UAT coordination, and deployment support.</p>
+          </div>
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">🛠️</div>
+            <h3>Technologies</h3>
+            <p>Microsoft Power Apps, Power Automate, SharePoint Online, Microsoft 365, Teams, and enterprise documentation tools.</p>
+          </div>
+          <div class="overview-card glass reveal">
+            <div class="ov-icon">🎯</div>
+            <h3>Key Learnings</h3>
+            <p>Enterprise-scale documentation, agile methodologies, stakeholder management, risk governance, and full software development lifecycle.</p>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- ============ CONTRIBUTIONS ============ -->
+    <section id="contributions" class="prac-slide">
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">My Contributions</span>
+          <h2>What I Delivered</h2>
+          <p class="slide-desc">From requirements to deployment — every phase of the enterprise software lifecycle.</p>
+        </div>
+        <div class="contrib-grid stagger-children">
+          <div class="contrib-card reveal"><div class="contrib-icon">📝</div><div class="contrib-content"><h3>Requirements Gathering</h3><p>Conducted interviews with PMO analysts to document pain points, feature requests, and mapped existing Excel-based workflow end-to-end.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">📄</div><div class="contrib-content"><h3>Enterprise Documentation</h3><p>Authored Business Case Forms, Security Risk &amp; Privacy Impact assessments, Solution Designs, and User Stories following KPMG standards.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">⚠️</div><div class="contrib-content"><h3>Risk Management</h3><p>Completed risk assessment documentation and security impact analysis for the Project Tracker solution, ensuring governance compliance.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">💻</div><div class="contrib-content"><h3>Development Support</h3><p>Built Power Apps screens (Dashboard, Add/Edit Project forms), designed SharePoint list schemas, and implemented conditional formatting logic.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">🔄</div><div class="contrib-content"><h3>Automation</h3><p>Created Power Automate flows for automated email notifications, approval workflows, and weekly status report generation.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">🚀</div><div class="contrib-content"><h3>Deployment</h3><p>Deployed the final Project Tracker to production, migrated historical data from legacy Excel trackers, and conducted hands-on training sessions.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">🧪</div><div class="contrib-content"><h3>Testing</h3><p>Ran UAT sessions with PMO analysts, fixed delegation issues, pagination bugs, form validation gaps, and improved mobile responsiveness.</p></div></div>
+          <div class="contrib-card reveal"><div class="contrib-icon">🎤</div><div class="contrib-content"><h3>Presentation</h3><p>Presented mid-internship progress and the completed Project Tracker Automation to IT Services leadership and key stakeholders.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOW ============ -->
+    <section id="workflow" class="prac-slide">
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">Project Workflow</span>
+          <h2>From Concept to Deployment</h2>
+          <p class="slide-desc">The structured methodology that guided the entire project lifecycle.</p>
+        </div>
+        <div class="workflow-track">
+          <div class="workflow-step"><div class="wf-icon">📋</div><div class="wf-label">Business<br/>Requirements</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">⚠️</div><div class="wf-label">Risk<br/>Assessment</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">🏗️</div><div class="wf-label">Solution<br/>Design</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">📝</div><div class="wf-label">User<br/>Stories</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">💻</div><div class="wf-label">Development</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">🧪</div><div class="wf-label">Testing</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">🚀</div><div class="wf-label">Deployment</div></div>
+          <div class="workflow-connector"></div>
+          <div class="workflow-step"><div class="wf-icon">📚</div><div class="wf-label">Documentation</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="prac-slide prac-slide--alt">
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">Project Gallery</span>
+          <h2>Visual Documentation</h2>
+          <p class="slide-desc">Screenshots and artifacts from the Project Tracker Automation development lifecycle.</p>
+        </div>
+        <div class="gallery-grid stagger-children">
+          <div class="gallery-item reveal" data-caption="Before Project — Legacy Excel Tracker"><img src="WebImg/Practicum Project/Before Project.png" alt="Before Project — Legacy Excel Tracker" loading="lazy" /><div class="gallery-overlay"><span>Before Project — Legacy Excel Tracker</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Apps — Dashboard View"><img src="WebImg/Practicum Project/Power Apps Project 1.png" alt="Power Apps Dashboard" loading="lazy" /><div class="gallery-overlay"><span>Power Apps — Dashboard View</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Apps — Project List"><img src="WebImg/Practicum Project/Power Apps Project 2.png" alt="Power Apps Project List" loading="lazy" /><div class="gallery-overlay"><span>Power Apps — Project List</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Apps — Form View"><img src="WebImg/Practicum Project/Power Apps Project 3.png" alt="Power Apps Form" loading="lazy" /><div class="gallery-overlay"><span>Power Apps — Form View</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Apps — Detail Screen"><img src="WebImg/Practicum Project/Power Apps Project 4.png" alt="Power Apps Detail Screen" loading="lazy" /><div class="gallery-overlay"><span>Power Apps — Detail Screen</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Automate — Main Flow"><img src="WebImg/Practicum Project/Power Automate Flow.png" alt="Power Automate Main Flow" loading="lazy" /><div class="gallery-overlay"><span>Power Automate — Main Flow</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Automate — Notification Flow"><img src="WebImg/Practicum Project/Power Automate Notification Flow.png" alt="Power Automate Notification Flow" loading="lazy" /><div class="gallery-overlay"><span>Power Automate — Notification Flow</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Automate — All Flows"><img src="WebImg/Practicum Project/All Power Automate Flows Procured.png" alt="All Power Automate Flows" loading="lazy" /><div class="gallery-overlay"><span>Power Automate — All Flows</span></div></div>
+          <div class="gallery-item reveal" data-caption="Power Automate — Testing & Debugging"><img src="WebImg/Practicum Project/Power Automate Testing and Debugging.png" alt="Power Automate Testing" loading="lazy" /><div class="gallery-overlay"><span>Power Automate — Testing &amp; Debugging</span></div></div>
+          <div class="gallery-item reveal" data-caption="SharePoint — List Structure"><img src="WebImg/Practicum Project/Sharepoint Lists Example.png" alt="SharePoint Lists" loading="lazy" /><div class="gallery-overlay"><span>SharePoint — List Structure</span></div></div>
+          <div class="gallery-item reveal" data-caption="SharePoint — Data Example"><img src="WebImg/Practicum Project/Sharepoint Example.png" alt="SharePoint Data Example" loading="lazy" /><div class="gallery-overlay"><span>SharePoint — Data Example</span></div></div>
+          <div class="gallery-item reveal" data-caption="SharePoint — Calculated Columns"><img src="WebImg/Practicum Project/SharePoint Example Calculation.png" alt="SharePoint Calculations" loading="lazy" /><div class="gallery-overlay"><span>SharePoint — Calculated Columns</span></div></div>
+          <div class="gallery-item reveal" data-caption="Business Case Form"><img src="WebImg/Practicum Project/Business Case Form.png" alt="Business Case Form" loading="lazy" /><div class="gallery-overlay"><span>Business Case Form</span></div></div>
+          <div class="gallery-item reveal" data-caption="Security Risk & Privacy Impact Form"><img src="WebImg/Practicum Project/Securit Risk %26 Privicay Impact Form.png" alt="Security Risk Form" loading="lazy" /><div class="gallery-overlay"><span>Security Risk &amp; Privacy Impact Form</span></div></div>
+          <div class="gallery-item reveal" data-caption="Solution Design Snippet"><img src="WebImg/Practicum Project/Solution Design Snippet.png" alt="Solution Design" loading="lazy" /><div class="gallery-overlay"><span>Solution Design Snippet</span></div></div>
+          <div class="gallery-item reveal" data-caption="User Story Snippet"><img src="WebImg/Practicum Project/User Story Snippet.png" alt="User Stories" loading="lazy" /><div class="gallery-overlay"><span>User Story Snippet</span></div></div>
+          <div class="gallery-item reveal" data-caption="Development Project Plan"><img src="WebImg/Practicum Project/Development Project Plan Document.png" alt="Development Project Plan" loading="lazy" /><div class="gallery-overlay"><span>Development Project Plan</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEARNINGS ============ -->
+    <section id="learnings" class="prac-slide">
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">What I Learned</span>
+          <h2>Skills &amp; Growth</h2>
+          <p class="slide-desc">The professional competencies and technical skills I developed throughout the program.</p>
+        </div>
+        <div class="learning-grid stagger-children">
+          <div class="learning-card glass reveal"><div class="lc-icon">📄</div><h3>Enterprise Documentation</h3><p>Mastered KPMG-standard business case forms, risk assessments, and solution design documents.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">🔄</div><h3>Agile Development</h3><p>Practiced sprint planning, daily standups, user story creation, and iterative development cycles.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">🔍</div><h3>Requirement Analysis</h3><p>Conducted stakeholder interviews, pain point mapping, and translated business needs into technical specs.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">⚠️</div><h3>Risk Management</h3><p>Evaluated security vulnerabilities, privacy impacts, and developed comprehensive mitigation strategies.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">🤝</div><h3>Cross-functional Collaboration</h3><p>Worked across IT, PMO, and business teams to align technical solutions with organizational goals.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">⚡</div><h3>Power Platform</h3><p>Built production apps with Power Apps, automated workflows with Power Automate, and managed data in SharePoint.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">💬</div><h3>Professional Communication</h3><p>Presented to senior leadership, wrote technical documentation, and facilitated training sessions.</p></div>
+          <div class="learning-card glass reveal"><div class="lc-icon">🔁</div><h3>Software Lifecycle</h3><p>Experienced every phase from planning through deployment, including UAT, handover, and post-launch support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TAKEAWAYS ============ -->
+    <section id="takeaways" class="prac-slide prac-slide--alt">
+      <div class="parallax-orb orb-5"></div>
+      <div class="container">
+        <div class="slide-header reveal">
+          <span class="section-label">Key Takeaways</span>
+          <h2>Impact &amp; Achievements</h2>
+        </div>
+        <div class="takeaway-content">
+          <blockquote class="takeaway-quote reveal">
+            <p>"This internship transformed my understanding of enterprise IT — from seeing software as just code to understanding it as a business tool that requires careful planning, documentation, risk assessment, and cross-functional collaboration to deliver real value."</p>
+          </blockquote>
+          <div class="takeaway-grid stagger-children">
+            <div class="takeaway-item reveal"><span class="takeaway-check">✓</span><div><h4>Enterprise Documentation Experience</h4><p>Authored 5+ formal enterprise documents following Big Four professional standards.</p></div></div>
+            <div class="takeaway-item reveal"><span class="takeaway-check">✓</span><div><h4>Agile Project Participation</h4><p>Completed 12 weeks of sprint cycles with a real PMO team in a corporate environment.</p></div></div>
+            <div class="takeaway-item reveal"><span class="takeaway-check">✓</span><div><h4>Real Business Processes</h4><p>Replaced a manual Excel-based tracking system with an automated Power Platform solution.</p></div></div>
+            <div class="takeaway-item reveal"><span class="takeaway-check">✓</span><div><h4>Professional Development</h4><p>Presented to senior IT leadership and conducted training sessions for end users.</p></div></div>
+            <div class="takeaway-item reveal"><span class="takeaway-check">✓</span><div><h4>Cross-team Collaboration</h4><p>Worked with PMO analysts, IT managers, and business stakeholders across departments.</p></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ============ DOCUMENT MODAL ============ -->
+  <div id="doc-modal" class="doc-modal">
+    <div class="doc-modal-backdrop"></div>
+    <div class="doc-modal-content">
+      <div class="doc-modal-header">
+        <h4 class="doc-modal-title"></h4>
+        <button class="doc-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="doc-modal-body">
+        <button class="doc-modal-nav doc-modal-prev" aria-label="Previous">‹</button>
+        <div class="doc-modal-img-wrap"><img id="doc-modal-img" src="" alt="" /></div>
+        <button class="doc-modal-nav doc-modal-next" aria-label="Next">›</button>
+      </div>
+      <div class="doc-modal-footer"><span class="doc-modal-counter"></span></div>
+    </div>
+  </div>
+
+  <!-- ============ GALLERY LIGHTBOX ============ -->
+  <div id="gallery-lightbox" class="gallery-lightbox">
+    <div class="gallery-lightbox-backdrop"></div>
+    <button class="gallery-lightbox-close" aria-label="Close">&times;</button>
+    <button class="gallery-lightbox-nav gallery-lightbox-prev" aria-label="Previous">‹</button>
+    <div class="gallery-lightbox-img-wrap"><img id="gallery-lightbox-img" src="" alt="" /></div>
+    <button class="gallery-lightbox-nav gallery-lightbox-next" aria-label="Next">›</button>
+    <div class="gallery-lightbox-info">
+      <span class="gallery-lightbox-caption"></span>
+      <span class="gallery-lightbox-counter"></span>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="brand"><span class="prompt">~/</span>yourname</span>
+          <span class="brand"><span class="prompt">~/</span>neoronlopez</span>
           <p>Software engineer building for the web and cloud. Always shipping, always learning.</p>
         </div>
         <div class="footer-col">
@@ -66,18 +301,19 @@
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:you@example.com">Email</a>
+          <a href="https://github.com/LopezNG" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/neoronlopez" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:csneolopez@gmail.com">Email</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Your Name. All rights reserved.</span>
+        <span>© <span data-year>2026</span> Neoron Lopez. All rights reserved.</span>
         <span>built with vanilla html · css · js</span>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
 </body>
 </html>

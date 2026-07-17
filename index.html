@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Software Engineer</title>
-  <meta name="description" content="Portfolio of Your Name — software engineer building things for the web and cloud." />
+  <title>Neoron Lopez — Software Engineer</title>
+  <meta name="description" content="Portfolio of Neoron Lopez — software engineer building things for the web and cloud." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/theme.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">
-        <span class="prompt">~/</span><span>yourname</span><span class="cursor"></span>
+        <span class="prompt">~/</span><span>neoronlopez</span><span class="cursor"></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -30,6 +31,12 @@
         <li><a href="projects.html">projects</a></li>
         <li><a href="blog.html">blog</a></li>
         <li><a href="contact.html">contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -38,12 +45,12 @@
     <!-- ============ HERO ============ -->
     <section class="hero container">
       <p class="eyebrow">software_engineer</p>
-      <h1>Hi, I'm <span class="hl">Your Name</span>.<br />I build things that run on the web&nbsp;&amp; cloud.</h1>
+      <h1>Hi, I'm <span class="hl">Neoron Lopez</span>.<br />I build things that run on the web&nbsp;&amp; cloud.</h1>
       <p class="lede">
         A developer who enjoys turning ideas into clean, reliable software —
         from frontend interfaces to backend services and everything in between.
       </p>
-      <p class="meta">// based in Your City &nbsp;·&nbsp; open to opportunities</p>
+      <p class="meta">// based in Philippines, Cavite &nbsp;·&nbsp; open to opportunities</p>
 
       <div class="hero-actions">
         <a class="btn btn--primary" href="projects.html">View Projects →</a>
@@ -51,9 +58,9 @@
       </div>
 
       <div class="socials" aria-label="Social links">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/LopezNG" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/neoronlopez" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:csneolopez@gmail.com">Email</a>
       </div>
 
       <!-- terminal flourish -->
@@ -64,7 +71,7 @@
         </div>
         <div class="terminal-body">
           <div class="ln"><span class="pmt">$</span> <span class="key">whoami</span></div>
-          <div class="out">&gt; Your Name — Software Engineer</div>
+          <div class="out">&gt; Neoron Lopez — Software Engineer</div>
           <div class="ln"><span class="pmt">$</span> <span class="key">cat</span> focus.txt</div>
           <div class="out">&gt; full-stack development · clean architecture · always learning</div>
           <div class="ln"><span class="pmt">$</span> <span class="key">echo</span> $STATUS</div>
@@ -84,62 +91,315 @@
       <!-- scrolling tickers -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span><span class="sep">///</span>JAVASCRIPT</span>
+          <span><span class="sep">///</span>PYTHON</span>
           <span><span class="sep">///</span>TYPESCRIPT</span>
           <span><span class="sep">///</span>REACT</span>
+          <span><span class="sep">///</span>PYTORCH</span>
+          <span><span class="sep">///</span>FLASK</span>
+          <span><span class="sep">///</span>FASTAPI</span>
+          <span><span class="sep">///</span>KOTLIN</span>
+          <span><span class="sep">///</span>TENSORFLOW</span>
           <span><span class="sep">///</span>NODE.JS</span>
-          <span><span class="sep">///</span>PYTHON</span>
-          <span><span class="sep">///</span>HTML5</span>
-          <span><span class="sep">///</span>CSS3</span>
-          <span><span class="sep">///</span>TAILWIND</span>
-          <span><span class="sep">///</span>NEXT.JS</span>
-          <span><span class="sep">///</span>EXPRESS</span>
+          <span><span class="sep">///</span>OPENCV</span>
         </div>
       </div>
       <div class="marquee marquee--reverse" aria-hidden="true">
         <div class="marquee-track">
           <span><span class="sep">///</span>POSTGRESQL</span>
-          <span><span class="sep">///</span>MONGODB</span>
-          <span><span class="sep">///</span>DOCKER</span>
-          <span><span class="sep">///</span>AWS</span>
+          <span><span class="sep">///</span>SUPABASE</span>
+          <span><span class="sep">///</span>REACT NATIVE</span>
+          <span><span class="sep">///</span>JETPACK COMPOSE</span>
           <span><span class="sep">///</span>GIT</span>
-          <span><span class="sep">///</span>LINUX</span>
-          <span><span class="sep">///</span>REST APIS</span>
-          <span><span class="sep">///</span>FIGMA</span>
-          <span><span class="sep">///</span>JEST</span>
-          <span><span class="sep">///</span>CI/CD</span>
+          <span><span class="sep">///</span>SCIKIT-LEARN</span>
+          <span><span class="sep">///</span>POWER APPS</span>
+          <span><span class="sep">///</span>YOLO</span>
+          <span><span class="sep">///</span>VITE</span>
+          <span><span class="sep">///</span>PANDAS</span>
         </div>
       </div>
 
       <!-- categorized grid -->
-      <div class="container" style="margin-top:48px">
+      <div class="container tech-categories">
+
         <h3 class="subhead">languages</h3>
-        <div class="tech-grid">
-          <div class="tech-item">JavaScript</div>
-          <div class="tech-item">TypeScript</div>
-          <div class="tech-item">Python</div>
-          <div class="tech-item">HTML &amp; CSS</div>
-          <div class="tech-item">SQL</div>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="python" data-color="#3776AB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="tech-icon" />
+            <span>Python</span>
+          </div>
+          <div class="tech-chip" data-icon="typescript" data-color="#3178C6">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon" />
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-chip" data-icon="javascript" data-color="#F7DF1E">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon" />
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-chip" data-icon="java" data-color="#ED8B00">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="tech-icon" />
+            <span>Java</span>
+          </div>
+          <div class="tech-chip" data-icon="kotlin" data-color="#7F52FF">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="tech-icon" />
+            <span>Kotlin</span>
+          </div>
+          <div class="tech-chip" data-icon="cplusplus" data-color="#00599C">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" class="tech-icon" />
+            <span>C++</span>
+          </div>
+          <div class="tech-chip" data-icon="csharp" data-color="#512BD4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="tech-icon" />
+            <span>C#</span>
+          </div>
+          <div class="tech-chip" data-icon="c" data-color="#A8B9CC">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" class="tech-icon" />
+            <span>C</span>
+          </div>
+          <div class="tech-chip" data-icon="html5" data-color="#E34F26">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML/CSS" class="tech-icon" />
+            <span>HTML/CSS</span>
+          </div>
         </div>
 
-        <h3 class="subhead">frameworks &amp; libraries</h3>
-        <div class="tech-grid">
-          <div class="tech-item">React</div>
-          <div class="tech-item">Next.js</div>
-          <div class="tech-item">Node.js</div>
-          <div class="tech-item">Express</div>
-          <div class="tech-item">Tailwind CSS</div>
+        <h3 class="subhead">backend &amp; databases</h3>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="flask" data-color="#61DAFB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" class="tech-icon" />
+            <span>Flask</span>
+          </div>
+          <div class="tech-chip" data-icon="fastapi" data-color="#009688">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="tech-icon" />
+            <span>FastAPI</span>
+          </div>
+          <div class="tech-chip" data-icon="nodejs" data-color="#339933">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon" />
+            <span>Node.js</span>
+          </div>
+          <div class="tech-chip" data-icon="rest" data-color="#6BA539">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="REST APIs">
+              <path d="M4 6h16M4 12h16M4 18h10"/>
+              <circle cx="20" cy="18" r="2"/>
+              <path d="M20 14v2"/>
+            </svg>
+            <span>REST APIs</span>
+          </div>
+          <div class="tech-chip" data-icon="mysql" data-color="#4479A1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon" />
+            <span>MySQL</span>
+          </div>
+          <div class="tech-chip" data-icon="postgresql" data-color="#4169E1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon" />
+            <span>PostgreSQL</span>
+          </div>
+          <div class="tech-chip" data-icon="sqlite" data-color="#003B57">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite" class="tech-icon" />
+            <span>SQLite</span>
+          </div>
+          <div class="tech-chip" data-icon="supabase" data-color="#3FCF8E">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Supabase" class="tech-icon" />
+            <span>Supabase</span>
+          </div>
+          <div class="tech-chip" data-icon="sqlc" data-color="#4A90D9">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="SQLC">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+              <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+              <path d="M15 17l2 2 4-4"/>
+            </svg>
+            <span>SQLC</span>
+          </div>
+        </div>
+
+        <h3 class="subhead">frontend &amp; mobile</h3>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="react" data-color="#61DAFB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="tech-icon" />
+            <span>React</span>
+          </div>
+          <div class="tech-chip" data-icon="reactnative" data-color="#61DAFB">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React Native" class="tech-icon" />
+            <span>React Native</span>
+          </div>
+          <div class="tech-chip" data-icon="expo" data-color="#000020">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="Expo">
+              <path d="M12 1.5c-.3 0-.6.1-.8.4L3.6 13.3c-.4.7-.2 1.6.4 2.2l6.8 6.8c.3.3.7.5 1.2.5s.9-.2 1.2-.5l6.8-6.8c.6-.6.8-1.5.4-2.2L12.8 1.9c-.2-.3-.5-.4-.8-.4zm0 2.4l6.6 9.8-6.6 6.6-6.6-6.6L12 3.9z"/>
+            </svg>
+            <span>Expo</span>
+          </div>
+          <div class="tech-chip" data-icon="tailwindcss" data-color="#06B6D4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="tech-icon" />
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="tech-chip" data-icon="vitejs" data-color="#646CFF">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="Vite" class="tech-icon" />
+            <span>Vite</span>
+          </div>
+          <div class="tech-chip" data-icon="jetpackcompose" data-color="#4285F4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg" alt="Jetpack Compose" class="tech-icon" />
+            <span>Jetpack Compose</span>
+          </div>
+          <div class="tech-chip" data-icon="androidstudio" data-color="#3DDC84">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" class="tech-icon" />
+            <span>Android Studio</span>
+          </div>
+          <div class="tech-chip" data-icon="xml" data-color="#FF6600">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xml/xml-original.svg" alt="XML" class="tech-icon" />
+            <span>XML</span>
+          </div>
+        </div>
+
+        <h3 class="subhead">machine learning &amp; computer vision</h3>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="pytorch" data-color="#EE4C2C">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="tech-icon" />
+            <span>PyTorch</span>
+          </div>
+          <div class="tech-chip" data-icon="tensorflow" data-color="#FF6F00">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon" />
+            <span>TensorFlow</span>
+          </div>
+          <div class="tech-chip" data-icon="tflite" data-color="#FF6F00">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow Lite" class="tech-icon" />
+            <span>TF Lite</span>
+          </div>
+          <div class="tech-chip" data-icon="scikitlearn" data-color="#F7931E">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" class="tech-icon" />
+            <span>Scikit-learn</span>
+          </div>
+          <div class="tech-chip" data-icon="pandas" data-color="#150458">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-icon" />
+            <span>Pandas</span>
+          </div>
+          <div class="tech-chip" data-icon="numpy" data-color="#013243">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-icon" />
+            <span>NumPy</span>
+          </div>
+          <div class="tech-chip" data-icon="keras" data-color="#D00000">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" alt="Keras" class="tech-icon" />
+            <span>Keras</span>
+          </div>
+          <div class="tech-chip" data-icon="opencv" data-color="#5C3EE8">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" alt="OpenCV" class="tech-icon" />
+            <span>OpenCV</span>
+          </div>
+          <div class="tech-chip" data-icon="cnn" data-color="#8E24AA">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="CNN">
+              <rect x="2" y="6" width="5" height="12" rx="1"/>
+              <rect x="9.5" y="4" width="5" height="16" rx="1"/>
+              <rect x="17" y="8" width="5" height="8" rx="1"/>
+              <path d="M7 10l2.5-2M7 14l2.5 2M14.5 9l2.5 1M14.5 15l2.5-1"/>
+            </svg>
+            <span>CNN</span>
+          </div>
+          <div class="tech-chip" data-icon="yolo" data-color="#00BFFF">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="YOLO">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <rect x="6" y="7" width="8" height="10" rx="1"/>
+              <circle cx="10" cy="12" r="1.5"/>
+              <line x1="17" y1="7" x2="17" y2="10"/>
+              <line x1="17" y1="14" x2="17" y2="17"/>
+            </svg>
+            <span>YOLO</span>
+          </div>
+          <div class="tech-chip" data-icon="mediapipe" data-color="#0097A7">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="MediaPipe">
+              <circle cx="12" cy="4" r="2"/>
+              <circle cx="12" cy="12" r="2"/>
+              <circle cx="6" cy="8" r="1.5"/>
+              <circle cx="18" cy="8" r="1.5"/>
+              <circle cx="6" cy="16" r="1.5"/>
+              <circle cx="18" cy="16" r="1.5"/>
+              <circle cx="12" cy="20" r="2"/>
+              <line x1="12" y1="6" x2="12" y2="10"/>
+              <line x1="12" y1="14" x2="12" y2="18"/>
+              <line x1="7.2" y1="9" x2="10.5" y2="11"/>
+              <line x1="16.8" y1="9" x2="13.5" y2="11"/>
+              <line x1="7.2" y1="15" x2="10.5" y2="13"/>
+              <line x1="16.8" y1="15" x2="13.5" y2="13"/>
+            </svg>
+            <span>MediaPipe</span>
+          </div>
+          <div class="tech-chip" data-icon="googlecolab" data-color="#F9AB00">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="Google Colab">
+              <path d="M4.54 9.46c2.1-2.1 5.52-2.1 7.62 0l.38.38.38-.38c2.1-2.1 5.52-2.1 7.62 0 2.1 2.1 2.1 5.52 0 7.62l-8 8-8-8c-2.1-2.1-2.1-5.52 0-7.62z" opacity="0.3"/>
+              <path d="M16.5 6.5a4.5 4.5 0 0 0-4.5 4.5 4.5 4.5 0 0 0-4.5-4.5 4.5 4.5 0 0 0-4.5 4.5c0 6 9 12 9 12s9-6 9-12a4.5 4.5 0 0 0-4.5-4.5z" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+            <span>Google Colab</span>
+          </div>
+        </div>
+
+        <h3 class="subhead">microsoft power platform</h3>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="powerapps" data-color="#742774">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="Power Apps">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>Power Apps</span>
+          </div>
+          <div class="tech-chip" data-icon="powerautomate" data-color="#0066FF">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Power Automate">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            <span>Power Automate</span>
+          </div>
+          <div class="tech-chip" data-icon="sharepoint" data-color="#0078D4">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="SharePoint">
+              <circle cx="12" cy="8" r="5" opacity="0.7"/>
+              <circle cx="8" cy="14" r="4" opacity="0.5"/>
+              <circle cx="15" cy="15" r="3.5" opacity="0.4"/>
+            </svg>
+            <span>SharePoint</span>
+          </div>
         </div>
 
         <h3 class="subhead">tools &amp; platforms</h3>
-        <div class="tech-grid">
-          <div class="tech-item">Git &amp; GitHub</div>
-          <div class="tech-item">Docker</div>
-          <div class="tech-item">AWS</div>
-          <div class="tech-item">PostgreSQL</div>
-          <div class="tech-item">MongoDB</div>
-          <div class="tech-item">Figma</div>
+        <div class="tech-grid" data-reveal>
+          <div class="tech-chip" data-icon="git" data-color="#F05032">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="tech-icon" />
+            <span>Git</span>
+          </div>
+          <div class="tech-chip" data-icon="github" data-color="#ffffff">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="tech-icon" />
+            <span>GitHub</span>
+          </div>
+          <div class="tech-chip" data-icon="postman" data-color="#FF6C37">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" class="tech-icon" />
+            <span>Postman</span>
+          </div>
+          <div class="tech-chip" data-icon="jupyter" data-color="#F37626">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" class="tech-icon" />
+            <span>Jupyter</span>
+          </div>
+          <div class="tech-chip" data-icon="excel" data-color="#217346">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" aria-label="Excel">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 13l3 4M11 13l-3 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span>Excel</span>
+          </div>
+          <div class="tech-chip" data-icon="matplotlib" data-color="#11557C">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" class="tech-icon" />
+            <span>Matplotlib</span>
+          </div>
+          <div class="tech-chip" data-icon="seaborn" data-color="#444876">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Seaborn">
+              <path d="M3 20h18"/>
+              <path d="M5 20v-8c0-1 .5-2 1.5-2s1.5 1 1.5 2v8"/>
+              <path d="M10 20v-12c0-1 .5-2 1.5-2s1.5 1 1.5 2v12"/>
+              <path d="M15 20v-6c0-1 .5-2 1.5-2s1.5 1 1.5 2v6"/>
+            </svg>
+            <span>Seaborn</span>
+          </div>
+          <div class="tech-chip" data-icon="webscraping" data-color="#47A248">
+            <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Web Scraping">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+            <span>Web Scraping</span>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -149,7 +409,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="brand"><span class="prompt">~/</span>yourname</span>
+          <span class="brand"><span class="prompt">~/</span>neoronlopez</span>
           <p>Software engineer building for the web and cloud. Always shipping, always learning.</p>
         </div>
         <div class="footer-col">
@@ -162,13 +422,13 @@
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:you@example.com">Email</a>
+          <a href="https://github.com/LopezNG" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/neoronlopez" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:csneolopez@gmail.com">Email</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Your Name. All rights reserved.</span>
+        <span>© <span data-year>2026</span> Neoron Lopez. All rights reserved.</span>
         <span>built with vanilla html · css · js</span>
       </div>
     </div>

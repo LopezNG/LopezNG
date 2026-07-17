@@ -1,0 +1,280 @@
+/* ===================================================================
+   Projects Page — Card Gallery Styles
+   =================================================================== */
+
+/* ---------- Featured Grid ---------- */
+.proj-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* ---------- Other Projects Grid ---------- */
+.proj-other-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+/* ===================================================================
+   PROJECT CARD BASE
+   =================================================================== */
+.proj-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-dim);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(74, 222, 128, 0.1),
+    0 0 20px rgba(74, 222, 128, 0.06);
+}
+
+/* ---------- Project Body ---------- */
+.proj-body {
+  padding: 24px 28px 28px;
+}
+
+.proj-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.proj-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: color 250ms ease;
+}
+.proj-card:hover .proj-header h3 {
+  color: var(--accent);
+}
+
+.proj-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-faint);
+  border: 1px solid var(--border);
+  background: var(--bg-elev-2);
+  transition: all 250ms ease;
+  flex-shrink: 0;
+}
+.proj-github:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  background: rgba(74, 222, 128, 0.08);
+  box-shadow: 0 0 14px rgba(74, 222, 128, 0.15);
+  transform: scale(1.08);
+}
+.proj-github svg {
+  width: 18px;
+  height: 18px;
+}
+
+.proj-desc {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+/* ---------- Tags override for projects ---------- */
+.proj-card .tl-tags {
+  margin-top: auto;
+}
+
+/* ===================================================================
+   FEATURED CARD — IMAGE GALLERY CAROUSEL
+   =================================================================== */
+.proj-card--featured .proj-gallery {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.proj-gallery-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proj-gallery-track img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* Navigation arrows */
+.proj-gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 11, 13, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 250ms ease, background 250ms ease, border-color 250ms ease;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 0 2px;
+}
+.proj-gallery:hover .proj-gallery-btn {
+  opacity: 1;
+}
+.proj-gallery-btn:hover {
+  background: rgba(74, 222, 128, 0.2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.proj-gallery-prev { left: 12px; }
+.proj-gallery-next { right: 12px; }
+
+/* Dots indicator */
+.proj-gallery-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.proj-gallery-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+  transition: background 250ms ease, transform 250ms ease;
+}
+
+.proj-gallery-dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+.proj-gallery-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Featured body spacing */
+.proj-card--featured .proj-body {
+  padding: 28px 32px 32px;
+}
+.proj-card--featured .proj-header h3 {
+  font-size: 1.5rem;
+}
+.proj-card--featured .proj-desc {
+  font-size: 0.95rem;
+}
+
+/* ===================================================================
+   COMPACT CARD — THUMBNAIL
+   =================================================================== */
+.proj-card--compact {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.proj-card--compact:hover .proj-thumb img {
+  transform: scale(1.04);
+}
+
+/* Hackathon / event badge */
+.proj-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(10, 11, 13, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--accent-dim);
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
+@media (max-width: 768px) {
+  .proj-other-grid {
+    grid-template-columns: 1fr;
+  }
+  .proj-card--featured .proj-body {
+    padding: 22px 22px 26px;
+  }
+  .proj-card--featured .proj-header h3 {
+    font-size: 1.3rem;
+  }
+  .proj-gallery-btn {
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+  .proj-gallery-prev { left: 8px; }
+  .proj-gallery-next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+  .proj-body {
+    padding: 18px 18px 22px;
+  }
+  .proj-header h3 {
+    font-size: 1.1rem !important;
+  }
+  .proj-desc {
+    font-size: 0.88rem;
+  }
+}

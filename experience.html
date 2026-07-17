@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience — Your Name</title>
-  <meta name="description" content="Work experience, hackathons, certifications and education of Your Name." />
+  <title>Experience — Neoron Lopez</title>
+  <meta name="description" content="Work experience, hackathons, certifications and education of Neoron Lopez." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/theme.js"></script>
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">
-        <span class="prompt">~/</span><span>yourname</span><span class="cursor"></span>
+        <span class="prompt">~/</span><span>neoronlopez</span><span class="cursor"></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -27,6 +28,12 @@
         <li><a href="projects.html">projects</a></li>
         <li><a href="blog.html">blog</a></li>
         <li><a href="contact.html">contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -44,152 +51,142 @@
       <div class="timeline">
         <article class="tl-item" data-reveal>
           <div class="tl-head">
-            <span class="tl-role">Software Engineer <span class="dim">@</span> <span class="tl-org">Company Name</span></span>
-            <span class="tl-date">2024 — Present</span>
+            <span class="tl-role">IT Project Management Intern <span class="dim">@</span> <span class="tl-org">KPMG</span></span>
+            <span class="tl-date">May 2026 — July 2026</span>
           </div>
           <p>
-            Brief description of your role and impact. Mention what you build, the
-            problems you solve, and any measurable results you're proud of.
+            Spearheaded enterprise documentation, requirements gathering, and the development of automated Power Platform solutions (Power Apps & Power Automate). Facilitated risk assessments and led UAT sessions, replacing legacy manual trackers with an optimized IT project management dashboard.
           </p>
           <div class="tl-tags">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">AWS</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-        </article>
-
-        <article class="tl-item" data-reveal>
-          <div class="tl-head">
-            <span class="tl-role">Software Engineer Intern <span class="dim">@</span> <span class="tl-org">Previous Company</span></span>
-            <span class="tl-date">2023 — 2024</span>
-          </div>
-          <p>
-            Describe what you worked on during this role — features shipped,
-            teams you collaborated with, and skills you developed.
-          </p>
-          <div class="tl-tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">Docker</span>
+            <span class="tag">Power Apps</span>
+            <span class="tag">Power Automate</span>
+            <span class="tag">SharePoint</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Documentation</span>
           </div>
         </article>
       </div>
 
       <!-- ===== ACHIEVEMENTS ===== -->
       <h3 class="subhead">achievements</h3>
-      <div class="card-grid">
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">⚡</span>
-            <span class="card--featured badge">🏆 Winner</span>
-          </div>
-          <h3>Hackathon Name 2024</h3>
-          <p>What you built in 36 hours, the problem it solved, and your role on the team.</p>
-          <div class="tl-tags">
-            <span class="tag">React</span>
-            <span class="tag">Python</span>
-            <span class="tag">OpenAI API</span>
-          </div>
-        </article>
 
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">⚡</span>
-            <span class="tl-date">Finalist</span>
+      <!-- Professional List View -->
+      <div class="hk-list-container">
+        <!-- Item -->
+        <div class="hk-list-item" data-reveal>
+          <div class="hk-list-year">2026</div>
+          <div class="hk-list-main">
+            <div class="hk-list-header">
+              <h3 class="hk-list-title">KPMG Academic Innovation Challenge</h3>
+              <span class="hk-list-badge">Participant</span>
+            </div>
+            <p class="hk-list-desc">Collaborated with a multidisciplinary team to design and present an innovative technology solution addressing real-world business challenges.</p>
+            <div class="tl-tags">
+              <span class="tag">Enterprise</span>
+              <span class="tag">Innovation</span>
+              <span class="tag">Business</span>
+              <span class="tag">AI</span>
+            </div>
           </div>
-          <h3>Another Hackathon 2023</h3>
-          <p>Short summary of the project, the tech you used, and the outcome.</p>
-          <div class="tl-tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Firebase</span>
+          <div class="hk-list-actions">
+            <button class="hk-cert-btn-list" data-event="KPMG 2026 Academic Innovation Challenge" aria-label="View Certificate">
+              <span>View Certificate</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
           </div>
-        </article>
+        </div>
 
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">★</span>
-            <span class="card--featured badge">🏅 1st Place</span>
+        <!-- Item -->
+        <div class="hk-list-item" data-reveal>
+          <div class="hk-list-year">2026</div>
+          <div class="hk-list-main">
+            <div class="hk-list-header">
+              <h3 class="hk-list-title">Agora Hackathon Philippines</h3>
+              <span class="hk-list-badge">Participant</span>
+            </div>
+            <p class="hk-list-desc">Designed and built an AI-powered Next Generation Sales Agent using modern AI technologies, enterprise workflows, and multi-agent concepts.</p>
+            <div class="tl-tags">
+              <span class="tag">AI</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Agents</span>
+              <span class="tag">Automation</span>
+            </div>
           </div>
-          <h3>Achievement Name 2023</h3>
-          <p>Describe the award or recognition, what you accomplished, and why it mattered.</p>
-          <div class="tl-tags">
-            <span class="tag">Leadership</span>
-            <span class="tag">Open Source</span>
+          <div class="hk-list-actions">
+            <button class="hk-cert-btn-list" data-event="Agora Hackathon Philippines 2026" aria-label="View Certificate">
+              <span>View Certificate</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
           </div>
-        </article>
+        </div>
 
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">✦</span>
-            <span class="tl-date">2022</span>
+        <!-- Item -->
+        <div class="hk-list-item" data-reveal>
+          <div class="hk-list-year">2026</div>
+          <div class="hk-list-main">
+            <div class="hk-list-header">
+              <h3 class="hk-list-title">IBM Bob Hackathon</h3>
+              <span class="hk-list-badge">Participant</span>
+            </div>
+            <p class="hk-list-desc">Participated in an intensive hackathon focused on software engineering, problem solving, and rapid application development.</p>
+            <div class="tl-tags">
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Problem Solving</span>
+              <span class="tag">Cloud</span>
+            </div>
           </div>
-          <h3>Recognition or Award 2022</h3>
-          <p>Short summary of the achievement, the context, and the impact it had.</p>
-          <div class="tl-tags">
-            <span class="tag">Community</span>
-            <span class="tag">Speaking</span>
+          <div class="hk-list-actions">
+            <button class="hk-cert-btn-list" data-event="IBM Bob Hackathon" aria-label="View Certificate">
+              <span>View Certificate</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
           </div>
-        </article>
+        </div>
+
+        <!-- Item -->
+        <div class="hk-list-item" data-reveal>
+          <div class="hk-list-year">2026</div>
+          <div class="hk-list-main">
+            <div class="hk-list-header">
+              <h3 class="hk-list-title">AMD Developer Hackathon</h3>
+              <span class="hk-list-badge">Participant</span>
+            </div>
+            <p class="hk-list-desc">Developed a technical solution under time constraints while exploring modern development tools and collaborative engineering practices.</p>
+            <div class="tl-tags">
+              <span class="tag">Development</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Engineering</span>
+            </div>
+          </div>
+          <div class="hk-list-actions">
+            <button class="hk-cert-btn-list" data-event="AMD Developer Hackathon" aria-label="View Certificate">
+              <span>View Certificate</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       <!-- ===== CERTIFICATES ===== -->
       <h3 class="subhead">certificates</h3>
-      <div class="card-grid">
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">▣</span>
-            <span class="tl-date">2024</span>
-          </div>
-          <h3>AWS Certified Cloud Practitioner</h3>
-          <p class="dim">Amazon Web Services</p>
-          <div class="card-links" style="margin-top:14px">
-            <a href="#" target="_blank" rel="noopener">view credential ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">▣</span>
-            <span class="tl-date">2023</span>
-          </div>
-          <h3>Meta Front-End Developer</h3>
-          <p class="dim">Coursera · Meta</p>
-          <div class="card-links" style="margin-top:14px">
-            <a href="#" target="_blank" rel="noopener">view credential ↗</a>
-          </div>
-        </article>
-
-        <article class="card" data-reveal>
-          <div class="card-top">
-            <span class="card-icon">▣</span>
-            <span class="tl-date">2023</span>
-          </div>
-          <h3>Certificate Name</h3>
-          <p class="dim">Issuing Organization</p>
-          <div class="card-links" style="margin-top:14px">
-            <a href="#" target="_blank" rel="noopener">view credential ↗</a>
-          </div>
-        </article>
-      </div>
+      <div id="cert-accordion" class="cert-grid" aria-label="Certifications"></div>
 
       <!-- ===== EDUCATION ===== -->
       <h3 class="subhead">education</h3>
       <div class="timeline">
         <article class="tl-item" data-reveal>
           <div class="tl-head">
-            <span class="tl-role">B.Sc. in Computer Science <span class="dim">@</span> <span class="tl-org">University Name</span></span>
-            <span class="tl-date">2021 — 2025</span>
+            <span class="tl-role">Bachelor of Science in Computer Science, Specialization in Machine Learning <span class="dim">@</span> <span class="tl-org">MAPÚA MALAYAN COLLEGES LAGUNA</span></span>
+            <span class="tl-date">2022 — Present</span>
           </div>
           <p>
-            Relevant coursework, GPA, honours, or activities. Mention clubs,
-            leadership roles, or notable academic projects.
+            Relevant Coursework: Software Engineering, Application Development, Web Systems and Technologies, Data Structures and Algorithms, Machine Learning, Information Assurance and Security, Calculus.
           </p>
           <div class="tl-tags">
-            <span class="tag">Data Structures</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Software Engineering</span>
             <span class="tag">Algorithms</span>
-            <span class="tag">Databases</span>
-            <span class="tag">Web Development</span>
+            <span class="tag">Web Technologies</span>
           </div>
         </article>
       </div>
@@ -200,7 +197,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="brand"><span class="prompt">~/</span>yourname</span>
+          <span class="brand"><span class="prompt">~/</span>neoronlopez</span>
           <p>Software engineer building for the web and cloud. Always shipping, always learning.</p>
         </div>
         <div class="footer-col">
@@ -213,17 +210,36 @@
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:you@example.com">Email</a>
+          <a href="https://github.com/LopezNG" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/neoronlopez" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:csneolopez@gmail.com">Email</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Your Name. All rights reserved.</span>
+        <span>© <span data-year>2026</span> Neoron Lopez. All rights reserved.</span>
         <span>built with vanilla html · css · js</span>
       </div>
     </div>
   </footer>
+
+  <!-- Certificate Modal -->
+  <div class="cert-modal" id="cert-modal" aria-hidden="true" role="dialog">
+    <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+    <div class="cert-modal-content">
+      <div class="cert-modal-header">
+        <h4 id="cert-modal-title">Certificate</h4>
+        <button class="cert-modal-close" id="cert-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="cert-modal-body">
+        <button class="cert-modal-nav prev" id="cert-modal-prev" aria-label="Previous certificate">&#10094;</button>
+        <div class="cert-modal-img-container" id="cert-modal-img-container">
+          <div class="cert-modal-loader" id="cert-modal-loader"></div>
+          <img id="cert-modal-img" src="" alt="Certificate view" />
+        </div>
+        <button class="cert-modal-nav next" id="cert-modal-next" aria-label="Next certificate">&#10095;</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
